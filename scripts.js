@@ -60,7 +60,7 @@ const text = (() => {
 
   // fall sem sér um að bæta við nýju item
   function add(value) {
-    if(!/^\s*$/.test(value))
+    if(/\S/.test(value))
     {
       const listItem = document.createElement('li');
       listItem.classList.add('item');
