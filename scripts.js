@@ -25,6 +25,8 @@ const text = (() => {
 
   // event handler fyrir það að klára færslu
   function finish(e) {
+    alert("hallo");
+    document.body.item.style.textDecoration='line-through';
   }
 
   // event handler fyrir það að breyta færslu
@@ -45,6 +47,18 @@ const text = (() => {
 
   // hjálparfall til að útbúa element
   function el(type, className, clickHandler) {
+    const li = document.createElement("li");
+    li.setAttribute("class", "item");
+
+    const input = document.createElement("input");
+    input.setAttribute("type", "checkbox");
+    input.setAttribute("class", "item-_checkbox");
+
+    const span = document.createElement("span");
+    span.setAttribute("class", "item__text");
+
+    const button = document.createElement("button");
+    button.setAttribute("class", "item__button");
   }
 
   return {
