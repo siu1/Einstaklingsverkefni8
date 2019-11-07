@@ -39,7 +39,7 @@ const text = (() => {
     let input = document.createElement("input");
     input.addEventListener("keypress", commit);
     input.classList.add("item__text");
-    input.classList.add('item__edit');
+    input.classList.add("item__edit");
     input.type = "text";
     input.value = e.target.innerText;
     e.target.parentElement.insertBefore(input,e.target.nextSibling);
@@ -51,7 +51,7 @@ const text = (() => {
   function commit(e) {
     if(e.keyCode === ENTER_KEYCODE) 
     {
-      let text = el('span', 'item__text', edit);
+      let text = el("span", "item__text", edit);
       text.textContent = e.target.value;
       e.target.parentElement.insertBefore(text, e.target.nextSibling);
       e.target.remove();
@@ -62,14 +62,14 @@ const text = (() => {
   function add(value) {
     if(/\S/.test(value))
     {
-      const listItem = document.createElement('li');
-      listItem.classList.add('item');
-      const checkBox = el('input', 'item__checkbox', finish);
-      checkBox.type = 'checkbox';
-      const span = el('span', 'item__text', edit);
+      const listItem = document.createElement("li");
+      listItem.classList.add("item");
+      const checkBox = el("input", "item__checkbox", finish);
+      checkBox.type = "checkbox";
+      const span = el("span", "item__text", edit);
       span.appendChild(document.createTextNode(value));
-      const button = el('button', 'item__button', deleteItem);
-      button.appendChild(document.createTextNode('Eyða'));
+      const button = el("button", "item__button", deleteItem);
+      button.appendChild(document.createTextNode("Eyða"));
 
       listItem.appendChild(checkBox);
       listItem.appendChild(span);
